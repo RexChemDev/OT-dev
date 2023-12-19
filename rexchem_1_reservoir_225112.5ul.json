@@ -1,0 +1,64 @@
+{
+    "ordering": [
+        [
+            "A1"
+        ]
+    ],
+    "brand": {
+        "brand": "RexChem",
+        "brandId": [
+            "R1"
+        ]
+    },
+    "metadata": {
+        "displayName": "RexChem 1 Reservoir 225112.5 µL",
+        "displayCategory": "reservoir",
+        "displayVolumeUnits": "µL",
+        "tags": []
+    },
+    "dimensions": {
+        "xDimension": 127.76,
+        "yDimension": 85.48,
+        "zDimension": 27.1
+    },
+    "wells": {
+        "A1": {
+            "depth": 26.1,
+            "totalLiquidVolume": 225112.5,
+            "shape": "rectangular",
+            "xDimension": 115,
+            "yDimension": 75,
+            "x": 63.88,
+            "y": 42.74,
+            "z": 1
+        }
+    },
+    "groups": [
+        {
+            "metadata": {
+                "wellBottomShape": "flat"
+            },
+            "wells": [
+                "A1"
+            ]
+        }
+    ],
+    "parameters": {
+        "format": "irregular",
+        "quirks": [
+            "centerMultichannelOnWells",
+            "touchTipDisabled"
+        ],
+        "isTiprack": false,
+        "isMagneticModuleCompatible": false,
+        "loadName": "rexchem_1_reservoir_225112.5ul"
+    },
+    "namespace": "custom_beta",
+    "version": 1,
+    "schemaVersion": 2,
+    "cornerOffsetFromSlot": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    }
+}

@@ -1,0 +1,330 @@
+{
+    "ordering": [
+        [
+            "A1",
+            "B1",
+            "C1",
+            "D1"
+        ],
+        [
+            "A2",
+            "B2",
+            "C2",
+            "D2"
+        ],
+        [
+            "A3",
+            "B3",
+            "C3",
+            "D3"
+        ],
+        [
+            "A4",
+            "B4",
+            "C4",
+            "D4"
+        ],
+        [
+            "A5",
+            "B5",
+            "C5",
+            "D5"
+        ],
+        [
+            "A6",
+            "B6",
+            "C6",
+            "D6"
+        ]
+    ],
+    "brand": {
+        "brand": "BohdanBlue",
+        "brandId": [
+            "BlueMiniblock"
+        ]
+    },
+    "metadata": {
+        "displayName": "BohdanBlue 24 Tube Rack with Generic 2 mL",
+        "displayCategory": "tubeRack",
+        "displayVolumeUnits": "µL",
+        "tags": []
+    },
+    "dimensions": {
+        "xDimension": 127.76,
+        "yDimension": 85.15,
+        "zDimension": 46.2
+    },
+    "wells": {
+        "A1": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 14,
+            "y": 65.15,
+            "z": 5.2
+        },
+        "B1": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 14,
+            "y": 47.15,
+            "z": 5.2
+        },
+        "C1": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 14,
+            "y": 29.15,
+            "z": 5.2
+        },
+        "D1": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 14,
+            "y": 11.15,
+            "z": 5.2
+        },
+        "A2": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 32,
+            "y": 65.15,
+            "z": 5.2
+        },
+        "B2": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 32,
+            "y": 47.15,
+            "z": 5.2
+        },
+        "C2": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 32,
+            "y": 29.15,
+            "z": 5.2
+        },
+        "D2": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 32,
+            "y": 11.15,
+            "z": 5.2
+        },
+        "A3": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 50,
+            "y": 65.15,
+            "z": 5.2
+        },
+        "B3": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 50,
+            "y": 47.15,
+            "z": 5.2
+        },
+        "C3": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 50,
+            "y": 29.15,
+            "z": 5.2
+        },
+        "D3": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 50,
+            "y": 11.15,
+            "z": 5.2
+        },
+        "A4": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 68,
+            "y": 65.15,
+            "z": 5.2
+        },
+        "B4": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 68,
+            "y": 47.15,
+            "z": 5.2
+        },
+        "C4": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 68,
+            "y": 29.15,
+            "z": 5.2
+        },
+        "D4": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 68,
+            "y": 11.15,
+            "z": 5.2
+        },
+        "A5": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 86,
+            "y": 65.15,
+            "z": 5.2
+        },
+        "B5": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 86,
+            "y": 47.15,
+            "z": 5.2
+        },
+        "C5": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 86,
+            "y": 29.15,
+            "z": 5.2
+        },
+        "D5": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 86,
+            "y": 11.15,
+            "z": 5.2
+        },
+        "A6": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 104,
+            "y": 65.15,
+            "z": 5.2
+        },
+        "B6": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 104,
+            "y": 47.15,
+            "z": 5.2
+        },
+        "C6": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 104,
+            "y": 29.15,
+            "z": 5.2
+        },
+        "D6": {
+            "depth": 41,
+            "totalLiquidVolume": 2000,
+            "shape": "circular",
+            "diameter": 8.25,
+            "x": 104,
+            "y": 11.15,
+            "z": 5.2
+        }
+    },
+    "groups": [
+        {
+            "brand": {
+                "brand": "Generic",
+                "brandId": [
+                    "Generic"
+                ]
+            },
+            "metadata": {
+                "wellBottomShape": "flat",
+                "displayCategory": "tubeRack"
+            },
+            "wells": [
+                "A1",
+                "B1",
+                "C1",
+                "D1",
+                "A2",
+                "B2",
+                "C2",
+                "D2",
+                "A3",
+                "B3",
+                "C3",
+                "D3",
+                "A4",
+                "B4",
+                "C4",
+                "D4",
+                "A5",
+                "B5",
+                "C5",
+                "D5",
+                "A6",
+                "B6",
+                "C6",
+                "D6"
+            ]
+        }
+    ],
+    "parameters": {
+        "format": "irregular",
+        "quirks": [],
+        "isTiprack": false,
+        "isMagneticModuleCompatible": false,
+        "loadName": "bohdanblue_24_tuberack_2000ul"
+    },
+    "namespace": "custom_beta",
+    "version": 1,
+    "schemaVersion": 2,
+    "cornerOffsetFromSlot": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    }
+}
