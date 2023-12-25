@@ -1,1 +1,1 @@
-{"opentrons_96_tiprack_1000ul": {"8": [-1.1, 1.4, -0.5]}, "opentrons_96_filtertiprack_20ul": {"11": [0.5, 0.6, -0.7]}, "rexchem_1_reservoir_225112.5ul": {"1": [0, 0, 1.5]}, "opentrons_96_filtertiprack_10ul": {"11": [0.5, 0.6, -0.7]}}
+{"opentrons_96_filtertiprack_20ul": {"11": {"x": 0.0, "y": 1.1000000000002501, "z": -0.20000000000000284}}, "plateone_96_wellplate_500ul": {"1": {"x": 0.9000000000000004, "y": 0.29999999999998295, "z": 0.0}}}

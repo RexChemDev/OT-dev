@@ -1,13 +1,11 @@
 import json
 import pandas as pd
-import opentrons.execute
 from string import ascii_uppercase
+import requests
 import json
 import time
 
 start = time.time()
-
-protocol = opentrons.execute.get_protocol_api("2.12")
 
 class bcolors:
     HEADER = '\033[95m'
@@ -20,35 +18,71 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-def loader(file_name, location):
-    loc = str(location)
-    try:
-        lw = protocol.load_labware(file_name, loc)
-        apply_offsets(lw, loc)
-        return lw
-    except FileNotFoundError:
-        #print(f"Custom labware [{file_name}] detected.")
-        return custom_labware(file_name, loc)
+def pulloffsets(cache=True):
+    "Gets all labware offsets from the json data pulled from [IP]:31950/runs."
+    s = requests.Session()
+    s.headers.update({"Opentrons-Version": "2"})
+    api_url = "http://127.0.0.1:31950/runs"
+    run_history = s.get(api_url).json()
+    
+    out = {}
+    for run in run_history["data"]:
+        for labware in run["labwareOffsets"]:
+            name = labware["definitionUri"].split("/")[1]
+            location = labware["location"]["slotName"]
+            offsets = labware["vector"]
+            out[name] = {location: offsets}
+    
+    if cache:
+        with open("offsets.json", "w") as f:
+            json.dump(out, f)
+    
+    return out
 
-def custom_labware(file_name, location):
-    with open(str(file_name)) as labware_file:
-        labware_def = json.load(labware_file)
-        c_lab = protocol.load_labware_from_definition(labware_def, location)
-    apply_offsets(c_lab, location)
-    return c_lab
+class Loader:
+    "Soft singleton implementation."
+    protocol = None
+    def __init__(self, protocol):
+        if Loader.protocol is None:
+            Loader.protocol = protocol
+        self.offsets = pulloffsets()
+    
+    def load(self, file_name: str, location: str):
+        loc = str(location)
+        try:
+            lw = self.protocol.load_labware(file_name, loc)
+            self.apply_offsets(lw, loc)
+            return lw
+        except FileNotFoundError:
+            #print(f"Custom labware [{file_name}] detected.")
+            return self.custom_labware(file_name, loc)
+    
+    def custom_labware(self, file_name: str, location: str):
+        with open(str(file_name)) as labware_file:
+            labware_def = json.load(labware_file)
+            c_lab = self.protocol.load_labware_from_definition(labware_def, location)
+        self.apply_offsets(c_lab, location)
+        return c_lab
+    
+    def apply_offsets(self, lab_object, location: str):
+        #with open("offsets.json", "r") as f:
+        #    offsets = json.load(f)
+        try:
+            offset_data = self.offsets[lab_object.name][location] #  gets dict of x, y, z
+            x, y, z = offset_data["x"], offset_data["y"], offset_data["z"]
+            lab_object.set_offset(x=x, y=y, z=z)
+            print(f"{bcolors.OKGREEN}[{lab_object.name}] @ {location}: {x} {y} {z}{bcolors.ENDC}")
+        except KeyError:
+            print(f"{bcolors.WARNING}[{lab_object.name}] @ {location}: No offset data{bcolors.ENDC}")
+    
+    def wipe_deck(self):
+        print("Clearing all objects from deck.")
+        for i in range(1, 12):
+            del self.protocol.deck[i]
 
-def apply_offsets(lab_object, location):
-    with open("offsets.json", "r") as f:
-        offsets = json.load(f)
-    try:
-        offset_data = offsets[lab_object.name][location] #  gets tuple of x, y, z
-        x, y, z = offset_data
-        lab_object.set_offset(x=x, y=y, z=z)
-        print(f"{bcolors.OKGREEN}[{lab_object.name}] @ {location}: {x} {y} {z}{bcolors.ENDC}")
-    except KeyError:
-        print(f"{bcolors.WARNING}[{lab_object.name}] @ {location}: No offset data{bcolors.ENDC}")
-        
 
+            
+            
 
 def coord_iter(last_letter="H", last_number=12):
     letter_sequence = ascii_uppercase[:ascii_uppercase.index(last_letter) + 1]

@@ -18,7 +18,7 @@
         ]
     },
     "metadata": {
-        "displayName": "rexchem_tlc",
+        "displayName": "RexChem TLC Adapter V2",
         "displayCategory": "reservoir",
         "displayVolumeUnits": "µL",
         "tags": []
@@ -34,7 +34,7 @@
             "totalLiquidVolume": 5,
             "shape": "circular",
             "diameter": 8,
-            "x": 20,
+            "x": 30,
             "y": 75.2,
             "z": 18.1
         },
@@ -43,7 +43,7 @@
             "totalLiquidVolume": 5,
             "shape": "circular",
             "diameter": 8,
-            "x": 20,
+            "x": 30,
             "y": 66,
             "z": 18.1
         },
@@ -52,7 +52,7 @@
             "totalLiquidVolume": 5,
             "shape": "circular",
             "diameter": 8,
-            "x": 20,
+            "x": 30,
             "y": 56.8,
             "z": 18.1
         },
@@ -61,7 +61,7 @@
             "totalLiquidVolume": 5,
             "shape": "circular",
             "diameter": 8,
-            "x": 20,
+            "x": 30,
             "y": 47.6,
             "z": 18.1
         },
@@ -70,7 +70,7 @@
             "totalLiquidVolume": 5,
             "shape": "circular",
             "diameter": 8,
-            "x": 20,
+            "x": 30,
             "y": 38.4,
             "z": 18.1
         },
@@ -79,7 +79,7 @@
             "totalLiquidVolume": 5,
             "shape": "circular",
             "diameter": 8,
-            "x": 20,
+            "x": 30,
             "y": 29.2,
             "z": 18.1
         },
@@ -88,7 +88,7 @@
             "totalLiquidVolume": 5,
             "shape": "circular",
             "diameter": 8,
-            "x": 20,
+            "x": 30,
             "y": 20,
             "z": 18.1
         },
@@ -97,7 +97,7 @@
             "totalLiquidVolume": 5,
             "shape": "circular",
             "diameter": 8,
-            "x": 20,
+            "x": 30,
             "y": 10.8,
             "z": 18.1
         }
