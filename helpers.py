@@ -39,6 +39,13 @@ def pulloffsets(cache=True):
     
     return out
 
+def pullexcel(file_name, loc_index=0, vol_index=1):
+    print("Reading spreadsheet data...")
+    xl_data = pd.read_excel(file_name, engine="openpyxl")
+    commands = [(item[loc_index], item[vol_index]) for item in xl_data.itertuples(index=False)]
+    print("Finished reading spreadsheet.")
+    return commands
+
 class Loader:
     "Soft singleton implementation."
     protocol = None
@@ -82,8 +89,6 @@ class Loader:
 
 
             
-            
-
 def coord_iter(last_letter="H", last_number=12):
     letter_sequence = ascii_uppercase[:ascii_uppercase.index(last_letter) + 1]
     number_sequence = [i for i in range(1, last_number + 1)]
@@ -91,6 +96,7 @@ def coord_iter(last_letter="H", last_number=12):
     for row in coord_grid:
         for item in row:
             yield item
+
 
 class Worker:
     
